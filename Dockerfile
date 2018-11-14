@@ -12,5 +12,6 @@ COPY . .
 # RUN phase
 
 FROM nginx
+# for elasticbeanstalk's benefit...
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
-# default command of image starts nginx for us
